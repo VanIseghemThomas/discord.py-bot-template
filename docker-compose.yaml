@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  discordbot:
+    image: discordbot-template:latest
+    build:
+      context: ./bot
+      dockerfile: Dockerfile
+    env_file:
+      - ./bot/.env
+    restart: always
