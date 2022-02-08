@@ -1,0 +1,50 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Server deployment
+
+# Controls when the workflow will run
+on:  
+  workflow_run:
+    workflows: ["Bot: Image build"]
+    branches: [main]
+    types:
+      - completed
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+      
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    env:
+      DISCORD_TOKEN: ${{secrets.DISCORD_TOKEN}}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      - name: List docker processes
+        run: docker ps
+
+      - name: downcase REPO
+        run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
+      
+      - name: Github Registry Login
+        run: echo $CR_PAT | docker login ghcr.io -u $CR_USER --password-stdin
+        env:
+          CR_PAT: ${{ secrets.PAT }}
+          CR_USER: ${{ secrets.CONTAINER_REGISTRY_USER }}
+
+      - name: Pull the latest images
+        run: docker-compose -f docker-compose.prod.yaml pull
+
+      - name: Terminate docker-compose service
+        run: docker-compose -f docker-compose.prod.yaml stop
+
+      - name: Run the new container with the build flag
+        run: docker-compose -f docker-compose.prod.yaml up -d --build
