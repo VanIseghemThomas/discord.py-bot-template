@@ -19,7 +19,7 @@ jobs:
 
     env:
       CR_PAT: ${{ secrets.PAT }}
-      CR_USER: ${{ secrets.CONTAINER_REGISTRY_USER }}
+      CR_USER: ${GITHUB_REPOSITORY_OWNER}
       PACKAGE: discordbot
     
     steps:
