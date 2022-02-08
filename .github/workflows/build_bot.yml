@@ -34,9 +34,6 @@ jobs:
       - name: Construct image name
         run: echo "IMAGE=ghcr.io/${REPO}/${PACKAGE}" >>${GITHUB_ENV}
 
-      - name: Append label to Dockerfile
-        run: echo LABEL org.opencontainers.image.source https://github.com/${REPO} >> bot/Dockerfile
-
       - name: Build Image
         run: |
           cd bot
