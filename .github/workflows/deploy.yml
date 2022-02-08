@@ -38,9 +38,6 @@ jobs:
       
       - name: Github Registry Login
         run: echo $CR_PAT | docker login ghcr.io -u $CR_USER --password-stdin
-        env:
-          CR_PAT: ${{ secrets.PAT }}
-          CR_USER: ${{ secrets.CONTAINER_REGISTRY_USER }}
 
       - name: Pull the latest images
         run: docker-compose -f docker-compose.prod.yaml pull
