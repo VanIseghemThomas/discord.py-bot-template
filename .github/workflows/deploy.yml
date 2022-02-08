@@ -21,6 +21,8 @@ jobs:
     runs-on: self-hosted
 
     env:
+      CR_PAT: ${{ secrets.PAT }}
+      CR_USER: ${GITHUB_REPOSITORY_OWNER}
       DISCORD_TOKEN: ${{secrets.DISCORD_TOKEN}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
