@@ -33,7 +33,7 @@ Now set up a self-hosted runner. Ideally this is configured as a service so that
 
 ![image](https://user-images.githubusercontent.com/55881698/153045303-8634d5b5-1824-4ddc-b30b-16a1c5115994.png)
 
-When starting the runner you should see the it appear with the **idle** status. I recommend [this doc](https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service) to get it up.
+When starting the runner you should see the it appear with the **idle** status. I recommend [this doc](https://docs.github.com/en/actions/hosting-your-own-runners/configuring-the-self-hosted-runner-application-as-a-service) to get it up and running as a service. If you want to just quickly run it using the run.sh script, make sure that your user has the right privileges to do this. Check out [this post](https://docs.docker.com/engine/install/linux-postinstall/) if you encounter an error due to this problem.
 
 ![image](https://user-images.githubusercontent.com/55881698/153045424-193ef313-8106-4f3f-8152-005ca40e8112.png)
 
