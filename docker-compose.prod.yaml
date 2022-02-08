@@ -1,0 +1,9 @@
+version: '3'
+services:
+  discordbot:
+    image: ghcr.io/${REPO}/discordbot:latest
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    env_file:
+      - ./bot/automated.env
+    restart: always
