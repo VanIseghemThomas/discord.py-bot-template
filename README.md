@@ -20,7 +20,9 @@ I'm going straight to running in docker. First you will have to build the docker
     docker build . -t <image tag>
 To run the bot you can use:
 
-    docker run <image tag>
+    docker run --env-file <env file> <image tag>
+
+you can add the **-d** flag to run in detached mode.
 
 ## Automated deployment pipeline
 
