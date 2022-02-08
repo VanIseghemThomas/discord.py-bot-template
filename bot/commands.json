@@ -1,0 +1,20 @@
+[
+    {
+        "command": "info",
+        "response": "This is the response. Don't add this field if you generate responses from the script.",
+        "description": "Description is used to describe the command. This is used for the help command."
+    },
+    {
+        "command": "response1",
+        "response": "This response is used, but doesn't have a documentation with it."
+    },
+    {
+        "command": "response2",
+        "description": "Response is generated from the script. But now it does have this field as documentation"
+    },
+    {
+        "command": "helloworld",
+        "response": "Hello World. I am alive and kicking!",
+        "description": "A command that says hello world"
+    }
+]
