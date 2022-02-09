@@ -7,3 +7,9 @@ services:
     env_file:
       - ./bot/automated.env
     restart: always
+
+  fastapi:
+    image: ghcr.io/${REPO}/fastapi:latest
+    restart: always
+    expose:
+      - "8080"
