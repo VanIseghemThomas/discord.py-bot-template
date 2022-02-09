@@ -1,6 +1,6 @@
 
 # discord.py bot template
-### A discord.py bot template for with easy deployment through Github Actions. You can use this template to just run a Python instance, Docker image, or Docker compose with other microservices. This is why it features a mockup API aswell, to showcase the flexibility of it.
+### A discord.py bot template with easy deployment through Github Actions. You can use this template to just run a Python instance, Docker image, or Docker compose with other microservices. This is why it features a mockup API aswell, to showcase the flexibility of it.
 
 ## Registering a new bot
 Go to [Discord Developer Applications Portal](https://discord.com/developers/applications) And create a new application. Then go to **Bot -> Add Bot**. Give it a name and the required permissions for your use case.
