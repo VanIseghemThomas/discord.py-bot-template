@@ -21,6 +21,10 @@
         "command": "generated",
         "description": "This command showcases a generated response with all the documentation available."
     },
+    {
+        "command": "fromapi",
+        "description": "Get's data from the api running as a microservice along the bot and returns it as a response."
+    },
 
     {
         "command": "commands",
