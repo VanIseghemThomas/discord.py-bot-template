@@ -21,6 +21,11 @@ To run the bot you can use:
     docker run --env-file <env file> <image tag>
 
 you can add the **-d** flag to run in detached mode.
+Even easier is using docker-compose. When working with different microservices this is must!
+    
+    docker-compose -f <yaml file> up --build
+    
+Use the --build flag if you've made changes. It won't rebuild every layer because it can use the cached one's, this means the whole process just takes a couple of seconds.
 
 ## Automated deployment pipeline
 First you'll have to generate a [**Personal Access Token**](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
