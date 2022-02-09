@@ -5,7 +5,7 @@ name: Server deployment
 # Controls when the workflow will run
 on:  
   workflow_run:
-    workflows: ["Bot: Image build"]
+    workflows: ["Bot: Image build", "API: Image build"]
     branches: [main]
     types:
       - completed
