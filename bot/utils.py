@@ -14,6 +14,8 @@ def load_commands():
             logging.error('Error loading commands.json, check if it is available or valid!')
             return {}
 
+# DEPRECATED: Currently not supported due to change in json format
+# Will be updated in the future
 def generate_command_embed(command_dict, prefix):
     # Generate a command embed
     embed = discord.Embed(

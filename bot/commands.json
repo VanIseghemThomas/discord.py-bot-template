@@ -1,33 +1,10 @@
-[
-    {
-        "command": "info",
-        "response": "This is the response. Don't add this field if you generate responses from the script.",
-        "description": "Description is used to describe the command. This is used for the help command."
-    },
-    {
-        "command": "response1",
-        "response": "This response is used, but doesn't have a documentation with it."
-    },
-    {
-        "command": "response2",
-        "description": "Response is generated from the script. But now it does have this field as documentation"
-    },
-    {
-        "command": "helloworld",
+{
+    "helloworld":{
         "response": "Hello World. I am alive and kicking!",
         "description": "A command that says hello world"
     },
-    {
-        "command": "generated",
-        "description": "This command showcases a generated response with all the documentation available."
-    },
-    {
-        "command": "fromapi",
-        "description": "Get's data from the api running as a microservice along the bot and returns it as a response."
-    },
 
-    {
-        "command": "commands",
-        "description": "Shows a list of commands"
+    "descriptiongone":{
+        "response": "Oops, no description..."
     }
-]
+}

@@ -1,2 +1,2 @@
-discord==1.7.3
+git+https://github.com/rapptz/discord.py@master
 requests==2.26.0
